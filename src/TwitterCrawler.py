@@ -34,4 +34,4 @@ brands = 'McDonald\'s,McDonalds,Starbucks,Subway,Taco Bell,Chick-fil-A,Chick fil
 
 stream = MyStreamer(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
 for i in range(10):
-  stream.statuses.filter(track=brands)
+  stream.statuses.filter(track=brands, language='en')
