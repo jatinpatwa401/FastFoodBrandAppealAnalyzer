@@ -10,13 +10,15 @@ Yogesh Singh
 
 ## `Overview`
 
-This project applies sentiment analysis to 
+This project applies sentiment analysis to a large amount of tweets to determine the appeal of Fast Food chains in the United States.
 
 **The Goal:**
-* Determine what genres are most preferred in different countries around the world by finding the location of users on Twitter that follow music artists.
+* Better understand fast food chains’ brand appeal in the United States. 
+* Twitter has over 300 million monthly active users as of 2019
+* Many post about their opinions on a variety of different topics, so there is a vast amount of data related to fast food.
 
 **The Benefit:**
-* World Music can reveal the regular pattern of the primary music preference in different parts of the world. This can help music providers provide and suggest music to the users in different regions and supply data support to anthropological and sociological studies.
+* By using sentiment analysis to determine if a tweet is positive or negative, along with geolocation data, we can visualize the public appeal of fast food chains in different areas of the United States.
 
 ## `Technologies Used`
 
