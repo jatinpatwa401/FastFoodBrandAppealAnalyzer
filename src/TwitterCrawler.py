@@ -1,5 +1,6 @@
 import json
 import TwitterConfig as config
+from datetime import datetime
 from twython import Twython, TwythonStreamer, TwythonError
 
 CONSUMER_KEY = config.twitter['conKey']
@@ -20,7 +21,8 @@ f= open("data.json","a+")
 class MyStreamer(TwythonStreamer):
   def on_success(self, data):
     if ('place' in data and data['place'] is not None) or ('location' in data['user'] and data['user']['location'] is not None):
-      print('Collecting data')
+      # print('Collecting data')
+      print(datetime.now())
       f.write(json.dumps(data) + ',\n')
       # f.write(str(data['user']['location']))
       # f.write('\n')
