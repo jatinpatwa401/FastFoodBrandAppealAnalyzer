@@ -1,3 +1,4 @@
+import re
 import csv
 import json
 import urllib3
@@ -27,10 +28,10 @@ data = csv.reader(rawData, delimiter=',')
 writer = csv.writer(cleanData, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 
 for row in data:
-    stateName = 'unknown'
-    stateCode = 'unknown'
-    countryName = 'unknown'
-    countryCode = 'unknown'
+    stateName = ''
+    stateCode = ''
+    countryName = ''
+    countryCode = ''
     # Set to unknown if location null
     if(row[11] == '' or row[11] == 'unknown'):
         if(row[11] == ''):
@@ -38,6 +39,7 @@ for row in data:
     else:
         userLoc = row[11]
         try: # Call API to get states and countries from user location
+            userLoc = re.sub(r'[^a-zA-Z ]+', '', userLoc)
             url = "http://www.datasciencetoolkit.org/maps/api/geocode/json?sensor=false&address=" + userLoc
             response = http.request('GET', url)
             info = json.loads(response.data.decode('utf-8'))
