@@ -16,7 +16,7 @@ twitter = Twython (
   )
 
 
-f= open("dataWithLocation3.json","a+")
+f= open("../data/rawData/dataWithLocation3.json","a+")
 
 class MyStreamer(TwythonStreamer):
   def on_success(self, data):

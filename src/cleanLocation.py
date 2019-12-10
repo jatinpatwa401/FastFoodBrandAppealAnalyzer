@@ -19,10 +19,11 @@ stateCodes = dict(map(reversed, stateNames.items()))
 # def cleanLocation():
 http = urllib3.PoolManager()
 
-date = '20191121'
+# date = '20191118'
+num = str(20)
 
-rawData = open('../data/unprocessedLocation/tweets' + date + '.csv', 'r')
-cleanData = open('../data/processedLocation/location' + date + '.csv','w')
+rawData = open('../data/unprocessedLocation/dataWithLocation-' + num + '.csv', 'r')
+cleanData = open('../data/processedLocation/location-' + num + '.csv','w')
 
 data = csv.reader(rawData, delimiter=',')
 writer = csv.writer(cleanData, delimiter=',', quoting=csv.QUOTE_MINIMAL)
