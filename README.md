@@ -24,57 +24,49 @@ This project applies sentiment analysis to a large amount of tweets to determine
 
 ### **Languages and Frameworks**
 
-Python: A high-level programming language. </br> https://www.python.org/
+Python: A high-level programming language.
+</br> https://www.python.org/
+
+PHP: A general-purpose scripting language that is especially suited to web development.
+</br> https://www.php.net/
+
 
 ### **Application Programming Interfaces**
 
-Twython: Actively maintained, pure Python wrapper for the Twitter API. </br> https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries
+Twython: A pure Python wrapper for the Twitter API.
+</br> https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries
+
+
+
+Apache Spark: A unified analytics engine for large-scale data processing.
+</br> https://spark.apache.org/
+
+### **Datasets for Training Model**
+
+Sentiment140: A dataset containing 1.6 million tweets marked as positive or negative sentiment.
+</br> https://www.kaggle.com/kazanova/sentiment140
+
+Sarcasm on Reddit: A dataset containing 1.3 million sarcastic comments from Reddit.
+</br> https://www.kaggle.com/danofer/sarcasm
 
 ## `Prerequisites`
 
-### Cloning this Repository
+### Clone this Repository
 
 Navigate to the desired location on your computer. Enter the following command in your terminal:
 ```
 git clone https://github.com/jschopick/FastFoodBrandAppeal.git
 ```
 
-### Requirements for Twitter Crawler
+## Requirements and Running the Program
 
-Create a Twitter Developer app to get access to your Consumer API Keys and Access Tokens: https://developer.twitter.com/en/apps <br>
-**Note:** You will need to create a Twitter Developer account if you do not have one.
+### Front-End Visualization
 
-Navigate to the src directory in the cloned repository in your terminal. 
-```
-cd FastFoodBrandAppeal/src/
-```
+See the [Laravel Installation Guide](frontend/LaravelInstallationGuide.pdf) for instructions on how to set up and run the front-end environment.
 
-Create a new file called TwitterConfig.py and add the following information:
-```
-twitter = {'conKey': '[Insert your public consumer API key]',
-           'conSecret': '[Insert your secret consumer API key]',
-           'accessToken': '[Insert your public access token]',
-           'accessSecret': '[Insert your secret access token]'}
-```
+### Back-End
 
-Install Twython through pip(Python 2) or pip3(Python3):
-```
-pip3 install twython
-```
-
-## `How to Run`
-
-### Starting the Twitter Crawler
-
-Navigate to the src directory in the cloned repository in your terminal. 
-```
-cd FastFoodBrandAppeal/src/
-```
-
-Run the following command(Use "python" instead of "python3" if you are on Python version 2):
-```
-python3 TwitterCrawler.py
-```
+See the [README.md](backend/README.md) file for instructions on how to set up and run the different backend environments.
 
 ## `License`
 
