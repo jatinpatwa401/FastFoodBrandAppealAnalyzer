@@ -1,5 +1,5 @@
 # **Fast Food Brand Appeal**
-## Using Twitter and Sentiment Analysis 
+### Using Twitter and Sentiment Analysis 
 
 ## `Authors`
 
@@ -22,7 +22,7 @@ This project applies sentiment analysis to a large amount of tweets to determine
 
 ## `Technologies Used`
 
-### **Languages and Frameworks**
+### **Programming Languages**
 
 Python: A high-level programming language.
 </br> https://www.python.org/
@@ -36,10 +36,11 @@ PHP: A general-purpose scripting language that is especially suited to web devel
 Twython: A pure Python wrapper for the Twitter API.
 </br> https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries
 
-
-
 Apache Spark: A unified analytics engine for large-scale data processing.
 </br> https://spark.apache.org/
+
+DataScienceToolkit Google-style Geocoder: A tool that takes a string representing a place or address, and converting it into structured data about the position of that location.
+</br> http://www.datasciencetoolkit.org/developerdocs#googlestylegeocoder
 
 ### **Datasets for Training Model**
 

@@ -41,11 +41,9 @@ idf = IDF(inputCol="tf", outputCol="features", minDocFreq=5)
 labels = StringIndexer(inputCol="original", outputCol = "label")
 lines = Pipeline(stages=[tokenizer,ngrams,hashtf,idf,labels])
 
-
 linesFit = lines.fit(trainSet)
 trainModel = linesFit.transform(trainSet)
 validationModel = linesFit.transform(valSet)
-
 
 lr = LogisticRegression(maxIter=100)
 model = lr.fit(trainModel)
@@ -53,11 +51,9 @@ predictions = model.transform(validationModel)
 evaluator = BinaryClassificationEvaluator(rawPredictionCol="rawPrediction")
 predictions.show(30)
 
-
 converter = IndexToString(inputCol="label", outputCol="label meaning")
 converted = converter.transform(predictions.select("label").distinct())
 converted.select("label", "label meaning").distinct().show()
-
 
 truePositive = predictions[(predictions.label == 0) & (predictions.prediction == 0)].count()
 trueNegative = predictions[(predictions.label == 1) & (predictions.prediction == 1)].count()
@@ -73,7 +69,6 @@ print("False Negative", falseNegative)
 print("recall", recall)
 print("precision", precision)
 print("accuracy", evaluator.evaluate(predictions))
-
 
 # Save the model
 output_directory = "./logisticRegressionSarcasm"
