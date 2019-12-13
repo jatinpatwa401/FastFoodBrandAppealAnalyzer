@@ -61,13 +61,13 @@ git clone https://github.com/jschopick/FastFoodBrandAppeal.git
 
 ## Requirements and Running the Program
 
-### Front-End Visualization
+### Frontend
 
-See the [Laravel Installation Guide](frontend/LaravelInstallationGuide.pdf) for instructions on how to set up and run the front-end environment.
+See the [Frontend README](frontend/README.md) for instructions on how to set up and run the frontend environment.
 
-### Back-End
+### Backend
 
-See the [README.md](backend/README.md) file for instructions on how to set up and run the different backend environments.
+See the [Backend README](backend/README.md) file for instructions on how to set up and run the different backend environments.
 
 ## `License`
 

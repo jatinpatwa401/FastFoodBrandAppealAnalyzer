@@ -127,9 +127,15 @@ restaurant | location | numPosSentiment | numNegSentiment | numPosSarcasm | numN
 ## Populate the Database
 
 * Open the MySQL Workbench, or open MySQL through the terminal. </br>
-* Create and configure a new database. Name it whatever you would like. </br>
+* Create and configure a new database called cs226. </br>
 * Connect to the database and start the database server on localhost. </br>
 * Import /backend/data/completedProcessing.csv as a new table. </br>
 *If you are using the MySQL Workbench, right click on "Tables" and run the "Table Data Import Wizard"*</br>
+
+Now create a Dump.sql file to be placed in frontend/visualisation/database.
+* In the MySQL Workbench, go to Server > Data Export
+* Select the cs226 database schema and the table you created inside of it.
+* Change the export path to YourPath/FastFoodBrandAppeal/frontend/visualisation/database/Dump.sql
+*Note: This file already exists as Dump20191204.sql so you can run the frontend for demo purposes*
 
 Congratulations! Your backend is completely setup and ready to be called by the frontend code.
