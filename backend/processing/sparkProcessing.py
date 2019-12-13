@@ -35,7 +35,7 @@ if __name__ == "__main__":
         StructField("countryName", StringType(), True), \
         StructField("countryCode", StringType(), True)])
 
-    df = sc.read.option("delimiter", ",").csv("./data/processedLocation/*.csv", header="false", schema=DFschema)
+    df = sc.read.option("delimiter", ",").csv("./data/processedLocation.csv", header="false", schema=DFschema)
     df.createOrReplaceTempView("data")
     
     #
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     query += "GROUP BY restaurant, stateCode, sentiment, sarcasm "
     query += "ORDER BY restaurant, stateCode"
     countEntries = spark.sql(query).collect()
-    result = open('./data/finalData/completedProcessing.csv', 'w')
+    result = open('./data/completedProcessing.csv', 'w')
 
     # Convert these counts into desired data format
     for row in countEntries:

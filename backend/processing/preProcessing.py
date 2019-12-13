@@ -5,6 +5,7 @@ import urllib3
 import urllib3.request
 from datetime import datetime
 
+# Get list of state names mapped from their name to abbreviation
 stateNames = {
     'Alabama': 'AL','Alaska': 'AK','Arizona': 'AZ','Arkansas': 'AR','California': 'CA','Colorado': 'CO','Connecticut': 'CT','Delaware': 'DE',
     'District of Columbia': 'DC','Florida': 'FL','Georgia': 'GA','Hawaii': 'HI','Idaho': 'ID','Illinois': 'IL','Indiana': 'IN','Iowa': 'IA','Kansas': 'KS',
@@ -14,16 +15,13 @@ stateNames = {
     'Pennsylvania': 'PA','Puerto Rico': 'PR','Rhode Island': 'RI','South Carolina': 'SC','South Dakota': 'SD','Tennessee': 'TN','Texas': 'TX','Utah': 'UT',
     'Vermont': 'VT','Virgin Islands': 'VI','Virginia': 'VA','Washington': 'WA','West Virginia': 'WV','Wisconsin': 'WI','Wyoming': 'WY',
 }
+# Get list of state names mapped from their abbreviation to name
 stateCodes = dict(map(reversed, stateNames.items()))
 
-# def cleanLocation():
 http = urllib3.PoolManager()
 
-# date = '20191118'
-num = str(20)
-
-rawData = open('../data/unprocessedLocation/dataWithLocation-' + num + '.csv', 'r')
-cleanData = open('../data/processedLocation/location-' + num + '.csv','w')
+rawData = open('../data/csvFiles/labeledData.csv', 'r')
+cleanData = open('../data/processedLocation.csv','w')
 
 data = csv.reader(rawData, delimiter=',')
 writer = csv.writer(cleanData, delimiter=',', quoting=csv.QUOTE_MINIMAL)
